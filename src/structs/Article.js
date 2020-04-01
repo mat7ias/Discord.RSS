@@ -194,7 +194,7 @@ module.exports = class Article {
     this.titleImages = []
     this.titleAnchors = []
     this._fullTitle = cleanup(source, raw.title, this.titleImages, this.titleAnchors, this.encoding)
-    this.title = this._fullTitle.length > 150 ? `${this._fullTitle.slice(0, 150)}...` : this._fullTitle
+    this.title = this._fullTitle.length > 290 ? `${this._fullTitle.slice(0, 290)}...` : this._fullTitle
     if (this.title) this.placeholders.push('title')
     for (var titleImgNum in this.titleImages) {
       const term = `title:image${parseInt(titleImgNum, 10) + 1}`
